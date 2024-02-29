@@ -1,35 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Jim OS</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | 0202e.xyz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('jim_wallpaper.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            animation: fadeIn ease 2s;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .container {
+            margin-top: 100px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            width: 40%;
+            background-color: #4CAF50;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .more-info-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .more-info-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <div id="desktop">
-        <!-- Desktop background will be set via CSS -->
+    <div class="container">
+        <h1>Welcome to 0202e.xyz</h1>
+        <p>This website is under construction and will be launching soon.</p>
+        <p>Stay tuned for updates!</p>
+        <div class="progress-bar"></div>
+        <a href="moreinfo.html" class="more-info-button">More Info</a>
     </div>
-	
-	<div id="startupModal" class="modal hide">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>Welcome to Jim OS</h2>
-        <p>Here's some information to get you started...</p>
-        <!-- Add more content as needed -->
-    </div>
-</div>
-
-    <div id="taskbar">
-        <button id="startButton">Start</button>
-        <div id="clock"></div>
-    </div>
-    <div id="startMenu" class="hide">
-        <ul>
-            <li>App 1</li>
-            <li>App 2</li>
-            <li>App 3</li>
-            <!-- Add more apps to your Start menu here -->
-        </ul>
-    </div>
-    <script src="script.js"></script>
 </body>
 </html>
