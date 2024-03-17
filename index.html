@@ -1,136 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<body>
-  <div id="particles-js"></div>  <div class="content">
-    <h1>What is this?</h1>
-  </div>
-</body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Particles</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> </title>
-
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;  /* Black background */
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    color: #fff;  /* White text */
-  }
-
-  .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 3rem;
-    animation: fadeIn 3s forwards;
-    text-shadow:
-      0 0 2px #fff,
-      0 0 5px #000,
-      0 0 10px #fff,
-      0 0 15px #000,
-      0 0 20px #fff;
-    animation: glitch 1s infinite alternate;
-  }
-  
-  body {
-  /* Other styles... */
-  color: transparent;  
-}
-
-.content h1 {
-  font-size: 3rem;
-  animation: fadeIn 3s forwards;
-
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);  /* Hide text initially */
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: #fff; 
     }
-    to {
-      opacity: 1;
+
+    #particles-js { 
+      position: absolute;
+      width: 100%; 
+      height: 100%;  
+      z-index: 0; 
     }
-  }
-</style>
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: fadeIn 3s forwards;
+      text-shadow:
+        0 0 2px #fff,
+        0 0 5px #000,
+        0 0 10px #fff,
+        0 0 15px #000,
+        0 0 20px #fff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0); 
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="content">
-  <h1>What is this?</h1>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  particlesJS('particles-js', {
-    particles: {
-      number: { value: 50, density: { enable: true, value_area: 800 } },
-      color: { value: '#fff' },
-      shape: {
-        type: ['circle', 'edge'],
-        stroke: { width: 0, color: '#000000' },
-        polygon: { nb_sides: 5 },
-        image: { src: 'img/github.svg', width: 100, height: 100 }
+  <div id="particles-js"></div> 
+  <div class="content">
+    <h1>What is this?</h1>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 50, density: { enable: true, value_area: 800 } },
+        color: { value: '#fff' },
+        shape: {
+          type: ['circle', 'edge'],
+          stroke: { width: 0, color: '#000000' },
+          polygon: { nb_sides: 5 },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#ffffff',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 4,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 }
+        }
       },
-      opacity: {
-        value: 0.5,
-        random: false,
-        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'grab' },
+          onclick: { enable: true, mode: 'fadeIn' },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 140, line_linked: { opacity: 1 } },
+        }
       },
-      size: {
-        value: 3,
-        random: true,
-        anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
-      },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: '#ffffff',
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 4,
-        direction: 'none',
-        random: false,
-        straight: false,
-        out_mode: 'out',
-        bounce: false,
-        attract: { enable: false, rotateX: 600, rotateY: 1200 }
-      }
-    },
-    interactivity: {
-      detect_on: 'canvas',
-      events: {
-        onhover: { enable: true, mode: 'grab' },
-        onclick: { enable: true, mode: 'fadeIn' },
-        resize: true
-      },
-      modes: {
-        grab: { distance: 140, line_linked: { opacity: 1 } },
-      
-      }
-    },
-    retina_detect: true
-  });
-</script>
+      retina_detect: true
+    });
+
+    function resizeParticles() {
+      particlesJS.load('particles-js', 'particles.json'); // Replace 'particles.json' with your file if needed
+    }
+
+    window.addEventListener('resize', resizeParticles);
+  </script>
+</body>
+</html>
