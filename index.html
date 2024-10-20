@@ -83,15 +83,25 @@
             background-color: #1c86ee;
             transform: translateY(-3px);
         }
+
+        /* New styles for positioning the iframe */
+        .spotify-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="stars"></div>
+    <div class="spotify-container">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5jETlbplk10X3x5n7mCPBL?utm_source=generator" width="300" height="352" frameBorder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
     <div class="container">
         <img src="jim.png" alt="Jim">
         <p>this is jim. jim was drawn in MS paint at 2am and has many different variations. Many jims have been made over the years.</p>
         <div class="button-container">
-                <a class="button" href="https://sites.google.com/view/more-about-jim/home" target="_blank">More Info</a>
+            <a class="button" href="https://sites.google.com/view/more-about-jim/home" target="_blank">More Info</a>
         </div>
     </div>
 </body>
